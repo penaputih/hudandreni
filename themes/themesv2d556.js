@@ -626,6 +626,17 @@ form.addEventListener("submit", (e) => {
     formData.append(key, data[key]);
   }
 
+  function showToast(message) {
+  const toast = document.getElementById("toast");
+  toast.textContent = message;
+  toast.style.display = "block";
+
+  // Hide after 3 seconds
+  setTimeout(() => {
+    toast.style.display = "none";
+  }, 3000);
+}
+
   fetch(scriptUrl, {
     method: "POST",
     body: formData
@@ -633,7 +644,8 @@ form.addEventListener("submit", (e) => {
 .then(() => {
   //alert("✅ RSVP berhasil disimpan!");
   form.reset();
-  fetchRSVPs(); // 
+  fetchRSVPs();
+  showToast("✅ Pesan berhasil dikirim!"); // 
 })
     .catch(err => {
       alert("❌ Gagal kirim ke Google Sheets: " + err.message);

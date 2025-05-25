@@ -32,6 +32,14 @@
     <link rel="stylesheet" href="./assets/build/assets/bootstrap-vCaDZZbr.css" />
     <link rel="stylesheet" href="./assets/build/assets/themesv2-DZZF_N8v.css" />
     <style>
+/* animasi toast*/
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translate(-50%, 20px); }
+  10%  { opacity: 1; transform: translate(-50%, 0); }
+  90%  { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, 20px); }
+}
+
         /* === Modal Overlay === */
 
         .modal-overlay {
@@ -917,6 +925,24 @@
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M6 18 18 6M6 6l12 12" />
                         </svg></button>
+
+                        <div id="toast" style="
+                        position: fixed;
+                        bottom: 30px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        background-color: #d4af37;
+                        color: white;
+                        padding: 12px 20px;
+                        border-radius: 20px;
+                        box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                        font-size: 14px;
+                        display: none;
+                        z-index: 9999;
+                        animation: fadeInOut 4s ease-in-out;
+                        ">
+                        RSVP berhasil dikirim!
+                    </div>
                 </div>
             </div>
         </div>
