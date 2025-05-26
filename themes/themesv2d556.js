@@ -155,7 +155,7 @@ var initCoreInvitation = function initCoreInvitation() {
   for (var _i3 = 0; _i3 < accountNumber.length; _i3++) {
     if (accountNumber[_i3].innerHTML) {
       if (lang == 'id') {
-        accountNumber[_i3].insertAdjacentHTML("afterend", "<button type='button' class='btn btn-sm btn-primary mt-2 mb-2 animate__animated animate__fadeInUp animate__slow delay-5' data-text='".concat(accountNumber[_i3].innerText, "' onclick='copyText(event)' style='font-family: sans-serif; border-radius: 4px'>Salin Rekening</button>"));
+        accountNumber[_i3].insertAdjacentHTML("afterend", "<button type='button' class='btn btn-sm btn-primary mt-2 mb-2 animate__animated animate__fadeInUp animate__slow delay-5' data-text='".concat(accountNumber[_i3].innerText, "' onclick='copyText(event)' style='font-family: sans-serif; border-radius: 4px'>Salin</button>"));
       } else {
         accountNumber[_i3].insertAdjacentHTML("afterend", "<button type='button' class='btn btn-sm btn-primary mt-2 mb-2 animate__animated animate__fadeInUp animate__slow delay-5' data-text='".concat(accountNumber[_i3].innerText, "' onclick='copyText(event)' style='font-family: sans-serif; border-radius: 4px'>Copy to Clipboard</button>"));
       }
